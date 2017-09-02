@@ -12,27 +12,28 @@ import javax.ws.rs.PathParam;
 public class MyServices {
 
 	@GET
-	@Path("/ola/{nome}")
-	public String olaGet(@PathParam("nome") String nome ){
-		return "Ola "+ nome;
+	@Path("/{id}")
+	public String olaGet(@PathParam("id") String id ){
+		return "Ola GET "+ id;
 	}
 	
 	@POST
-	@Path("/ola/{nome}")
-	public String olaPost(@PathParam("nome") String nome ){
-		return "Ola "+ nome;
+	@Path("/add")
+	public String olaPost(String nome ){
+		return "Ola ADD "+ nome;
 	}
 	
 	@PUT
-	@Path("/ola/{nome}")
-	public String olaPut(@PathParam("nome") String nome ){
-		return "Ola "+ nome;
+	@Path("/{id}")
+	public String olaPut(@PathParam("id") String nome ){
+		return "Ola PUT"+ nome;
 	}
+
 	
 	@DELETE
-	@Path("/ola/{nome}")
-	public String olaDelete(@PathParam("nome") String nome ){
-		return "Ola "+ nome;
+	@Path("/{id}")
+	public String olaDelete(@PathParam("id") String nome ){
+		return "Ola DELETE "+ nome;
 	}
 	
 	
