@@ -3,38 +3,67 @@ package com.grupoRestJava.services;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.grupoRestJava.AS.LivrosAS;
-import com.grupoRestJava.domain.entity.StatusProspect;
+import com.grupoRestJava.domain.entity.Livro;
 
 
-@Path("/pessoaFCD")
+@Path("/livrofcd")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class PessoaFCD {
+@Stateless
+public class LivroFCD {
 
 	@EJB
 	private LivrosAS livroAS;
 	
+	
 	@GET
-	@Path("/listarTodos")
-	public List<StatusProspect> listarTodos() throws Exception{
+	@Path("/listar")
+	public List<Livro> listarTodos() throws Exception{
 		return livroAS.listAll();
 	}
 	
-	@POST
-	@Path("/addStatus")
-	public void addStatus(StatusProspect status){
-		livroAS.salvar(status);
+	
+	@GET
+	@Path("/{id}")
+	public Livro listarLivro(@PathParam("id") Integer id) throws Exception{
+		return livroAS.findById(id) ;
 	}
 	
-	/*
+	@POST
+	@Path("/")
+	public Livro addLivro(Livro livro) throws Exception{
+		return livroAS.salvar(livro);
+	}
+	
+	/*@GET
+	@Path("/pessoa/{id}")
+	public PessoaTO listarPessoa(@PathParam("id") Integer id) throws Exception{
+		PessoaTO s = new  PessoaTO();
+		s.setId(1L);
+		s.setNome("Haikal");
+		return s;
+	}
+	a
+	@POST
+	@Path("/addPessoa")
+	public void addStatus(PessoaTO p){
+		System.out.println(p);
+	}
+	
+	*/
+/*	
+	
+	
 	@GET
 	@Path("/{id}")
 	public PessoaTO olaGet(@PathParam("id") Long id ){
