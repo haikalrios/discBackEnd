@@ -34,4 +34,7 @@ public class MyServices {
 	public String olaDelete(@PathParam("nome") String nome ){
 		return "Ola "+ nome;
 	}
+	
+	
+
 }
