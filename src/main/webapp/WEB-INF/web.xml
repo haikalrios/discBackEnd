@@ -27,22 +27,14 @@
 			org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
 		</servlet-class>
 	</servlet>
-	<servlet>
-		<servlet-name>MyServlet</servlet-name>
-		<display-name>MyServlet</display-name>
-		<description></description>
-		<servlet-class>com.grupoRestJava.servlet.MyServlet</servlet-class>
-	</servlet>
+	
 
 	<servlet-mapping>
 		<servlet-name>resteasy-servlet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 	
-	<servlet-mapping>
-		<servlet-name>MyServlet</servlet-name>
-		<url-pattern>/MyServlet</url-pattern>
-	</servlet-mapping>
+
 
 	
 </web-app>
