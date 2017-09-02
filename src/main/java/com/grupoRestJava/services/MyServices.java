@@ -8,9 +8,12 @@ import javax.ws.rs.PathParam;
 @Path("/myServices")
 public class MyServices {
 
-	@GET()
+	@GET
 	@Path("/ola/{nome}")
 	public String ola(@PathParam("nome") String nome ){
 		return "Ola "+ nome;
 	}
+	
+	
+
 }
