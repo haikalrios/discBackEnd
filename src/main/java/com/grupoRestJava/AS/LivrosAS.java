@@ -19,7 +19,7 @@ public class LivrosAS {
 			throw new Exception("Preciso passa o livro");
 		}
 		if (livro.getDescricao() == null) {
-			throw new Exception("Preciso passar a decsrição");
+			throw new Exception("Preciso passar a decsriï¿½ï¿½o");
 		}
 
 		if (livro.getIsbn() == null) {
@@ -32,6 +32,12 @@ public class LivrosAS {
 		if (livro.getTitulo() == null) {
 			throw new Exception("Preciso passar o titulo");
 		}
+		if (livro.getAutor() == null) {
+			throw new Exception("Preciso passar o autor");
+		}
+		if (livro.getStatus() == null) {
+			throw new Exception("Preciso passar o status");
+		}
 
 		livroDao.persist(livro);
 
@@ -40,12 +46,12 @@ public class LivrosAS {
 	}
 
 	public Livro updateLivro(Livro livro) throws Exception {
-		
+
 		if (livro == null) {
 			throw new Exception("Preciso passa o livro");
 		}
 		if (livro.getDescricao() == null) {
-			throw new Exception("Preciso passar a decsrição");
+			throw new Exception("Preciso passar a decsriï¿½ï¿½o");
 		}
 		if (livro.getId()== null) {
 			throw new Exception("Preciso passar o id");
@@ -61,26 +67,33 @@ public class LivrosAS {
 		if (livro.getTitulo() == null) {
 			throw new Exception("Preciso passar o titulo");
 		}
+		if (livro.getAutor() == null) {
+			throw new Exception("Preciso passar o autor");
+		}
+		if (livro.getStatus() == null) {
+			throw new Exception("Preciso passar o status");
+		}
 
 		Livro livroAtualizado = livroDao.findById(livro.getId());
-		
+
 		if (livroAtualizado.getId()== null) {
-			throw new Exception("Livro não existe");
+			throw new Exception("Livro nï¿½o existe");
 		}
 		livroAtualizado.setDescricao(livro.getDescricao());
 		livroAtualizado.setId(livro.getId());
 		livroAtualizado.setIsbn(livro.getIsbn());
 		livroAtualizado.setSubTitulo(livro.getSubTitulo());
 		livroAtualizado.setTitulo(livro.getTitulo());
-		
-		
+		livroAtualizado.setAutor(livro.getAutor());
+		livroAtualizado.setStatus(livro.getStatus());
+
 		livroDao.persist(livroAtualizado);
 
 		return livro;
 
 	}
-	
-	
+
+
 	public List<Livro> listAll() throws Exception {
 		return livroDao.findAll();
 
@@ -98,7 +111,7 @@ public class LivrosAS {
 	public Livro delete(Integer id) throws Exception {
 		Livro l = livroDao.findById(id);
 		if (l == null) {
-			throw new Exception("Livro não existe");
+			throw new Exception("Livro nï¿½o existe");
 		}
 		livroDao.remove(l);
 		return l ;

@@ -27,41 +27,36 @@ public class LivroFCD {
 
 	@EJB
 	private LivrosAS livroAS;
-	
-	
+
 	@GET
 	@Path("/listar")
 	public List<Livro> listarTodos() throws Exception{
 		return livroAS.listAll();
 	}
-	
-	
+
 	@GET
 	@Path("/{id}")
 	public Livro listarLivro(@PathParam("id") Integer id) throws Exception{
 		return livroAS.findById(id) ;
 	}
-	
+
 	@POST
 	@Path("/")
 	public Livro addLivro(Livro livro) throws Exception{
 		return livroAS.addLivro(livro);
 	}
-	
+
 	@PUT
 	@Path("/")
 	public Livro updateLivro( Livro l) throws Exception{
-		
+
 		return livroAS.updateLivro(l) ;
 	}
-	
-	
+
 	@DELETE
 	@Path("/{id}")
 	public Livro deleteLivro(@PathParam("id") Integer id) throws Exception{
 		return livroAS.delete(id) ;
 	}
-
-	
 
 }
