@@ -2,7 +2,6 @@ package com.grupoRestJava.services;
 
 import java.util.List;
 
-import javax.decorator.Delegate;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
@@ -38,6 +37,12 @@ public class LivroFCD {
 	@Path("/{id}")
 	public Livro listarLivro(@PathParam("id") Integer id) throws Exception{
 		return livroAS.findById(id) ;
+	}
+	
+	@GET
+	@Path("/listar/titulo/{descricao}")
+	public List<Livro> listarLivroPorTitulo(@PathParam("descricao") String titulo) throws Exception{
+		return livroAS.listarPorTitulo(titulo);
 	}
 
 	@POST

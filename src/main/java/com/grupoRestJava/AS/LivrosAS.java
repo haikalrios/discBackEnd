@@ -98,6 +98,14 @@ public class LivrosAS {
 		return livroDao.findAll();
 
 	}
+	
+	public List<Livro> listarPorTitulo(String titulo) throws Exception {
+		if (titulo == null){
+			throw new Exception("Preciso passar o titulo a ser pesquisado");
+		}
+		return livroDao.buscarLivrosPorTitulo(titulo);
+
+	}
 
 	public Livro findById(Integer id) throws Exception {
 		if (id == null) {

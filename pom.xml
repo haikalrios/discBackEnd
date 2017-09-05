@@ -26,23 +26,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jaxrs</artifactId>
 			<version>2.3.10.Final</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>net.sf.scannotation</groupId>
-			<artifactId>scannotation</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jaxb-provider</artifactId>
@@ -55,6 +43,7 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${version.org.hibernate}</version>
+			<scope>provided</scope>
 			<!-- this already part of JDK6 -->
 			<exclusions>
 				<exclusion>
