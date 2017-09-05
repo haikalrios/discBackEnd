@@ -19,7 +19,7 @@ public class LivrosAS {
 			throw new Exception("Preciso passa o livro");
 		}
 		if (livro.getDescricao() == null) {
-			throw new Exception("Preciso passar a decsriï¿½ï¿½o");
+			throw new Exception("Preciso passar a descrição");
 		}
 
 		if (livro.getIsbn() == null) {
@@ -51,7 +51,7 @@ public class LivrosAS {
 			throw new Exception("Preciso passa o livro");
 		}
 		if (livro.getDescricao() == null) {
-			throw new Exception("Preciso passar a decsriï¿½ï¿½o");
+			throw new Exception("Preciso passar a descrição");
 		}
 		if (livro.getId()== null) {
 			throw new Exception("Preciso passar o id");
@@ -119,7 +119,7 @@ public class LivrosAS {
 	public Livro delete(Integer id) throws Exception {
 		Livro l = livroDao.findById(id);
 		if (l == null) {
-			throw new Exception("Livro nï¿½o existe");
+			throw new Exception("Livro não existe");
 		}
 		livroDao.remove(l);
 		return l ;
