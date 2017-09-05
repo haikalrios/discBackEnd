@@ -14,7 +14,7 @@ public class Livro extends BaseEntidade<Integer> {
 	private static final long serialVersionUID = 492472753851383923L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	@Column(name = "PK_Livro")
 	private Integer           id;
 
