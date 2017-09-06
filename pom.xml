@@ -11,7 +11,7 @@
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
 			<artifactId>jboss-javaee-6.0</artifactId>
-			<version>3.0.2.Final-redhat-15</version>
+			<version>3.0.2.Final</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jaxb-provider</artifactId>
-			<version>3.0.16.Final</version>
+			<version>3.0.16</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.2.18.Final-redhat-2</version>
+			<version>4.2.18.Final</version>
 			<scope>provided</scope>
 			<!-- this already part of JDK6 -->
 			<exclusions>
@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.18.Final-redhat-2</version>
+			<version>4.2.18.Final</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -64,7 +64,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-infinispan</artifactId>
-			<version>4.2.18.Final-redhat-2</version>
+			<version>4.2.18.Final</version>
 			<scope>provided</scope>
 			<!-- we use org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec 
 				from hibernate-core here -->
@@ -78,14 +78,14 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.3.2.Final-redhat-2</version>
+			<version>4.3.2.Final</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Tools -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator-annotation-processor</artifactId>
-			<version>4.3.2.Final-redhat-2</version>
+			<version>4.3.2.Final</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
