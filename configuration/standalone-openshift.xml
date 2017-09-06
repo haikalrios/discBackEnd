@@ -167,7 +167,7 @@
 						<flush-strategy>FailingConnectionOnly</flush-strategy>
 					</pool>
 					<security>
-						<user-name>root</user-name>
+						<user-name>haikal</user-name>
 						<password>200580</password>
 					</security>
 					<statement>
