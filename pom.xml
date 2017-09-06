@@ -5,20 +5,17 @@
 	<artifactId>RESTful</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<parent>
-		<groupId>org.jboss.bom.eap</groupId>
-		<version>6.4.0.GA</version>
-		<artifactId>jboss-eap-bom-parent</artifactId>
-	</parent>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
 			<artifactId>jboss-javaee-6.0</artifactId>
-			<version>${version.org.jboss.spec.jboss.javaee.6.0}</version>
+			<version>3.0.2.Final-redhat-15</version>
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -42,7 +39,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>${version.org.hibernate}</version>
+			<version>4.2.18.Final-redhat-2</version>
 			<scope>provided</scope>
 			<!-- this already part of JDK6 -->
 			<exclusions>
@@ -55,19 +52,19 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${version.org.hibernate}</version>
+			<version>4.2.18.Final-redhat-2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-envers</artifactId>
-			<version>${version.org.hibernate}</version>
+			<version>4.2.18.Final-redhat-2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-infinispan</artifactId>
-			<version>${version.org.hibernate}</version>
+			<version>4.2.18.Final-redhat-2</version>
 			<scope>provided</scope>
 			<!-- we use org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec 
 				from hibernate-core here -->
@@ -81,20 +78,20 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>${version.org.hibernate.validator}</version>
+			<version>4.3.2.Final-redhat-2</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Tools -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator-annotation-processor</artifactId>
-			<version>${version.org.hibernate.validator}</version>
+			<version>4.3.2.Final-redhat-2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
-			<version>${version.org.hibernate-jpamodelgen}</version>
+			<version>1.2.0.Final</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
