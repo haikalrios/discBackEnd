@@ -145,7 +145,7 @@
 		<subsystem xmlns="urn:jboss:domain:bean-validation:1.0" />
 		<subsystem xmlns="urn:jboss:domain:datasources:4.0">
 			<datasources>
-				<datasource jndi-name="java:jboss/datasources/HaikalExampleDS"
+				<datasource jndi-name="jboss/datasources/HaikalExampleDS"
 					pool-name="ExampleDS" enabled="true" use-java-context="true">
 					<connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
 					<driver>h2</driver>
@@ -154,7 +154,7 @@
 						<password>sa</password>
 					</security>
 				</datasource>
-				<datasource jta="true" jndi-name="java:jboss/datasources/livro-ds"
+				<datasource jta="true" jndi-name="jboss/datasources/livro-ds"
 					pool-name="test" enabled="true" use-java-context="true" use-ccm="true">
 					<connection-url>jdbc:mysql://localhost:3306/livro</connection-url>
 					<driver>com.mysql</driver>
