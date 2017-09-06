@@ -22,5 +22,9 @@
 	</persistence-unit>
 </persistence>
 
+<!-- Username: root
+       Password: 200580
+  Database Name: livro
+ Connection URL: mysql://mariadb:3306/ -->
 
     
