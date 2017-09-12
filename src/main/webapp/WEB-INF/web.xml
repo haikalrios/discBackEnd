@@ -4,7 +4,7 @@
 
 <web-app >
 	<display-name>Restful Web Application</display-name>
-
+<!-- 
 	<context-param>
 		<param-name>resteasy.scan</param-name>
 		<param-value>true</param-value>
@@ -33,5 +33,5 @@
 		<servlet-name>resteasy-servlet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-
+ -->
 </web-app>
